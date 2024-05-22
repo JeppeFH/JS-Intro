@@ -32,27 +32,43 @@
       incidunt magnam quisquam maiores est animi nisi natus, provident voluptas.
       Quis.
     </p>
-    <input id="input" type="text" />
 
-    <button id="button">Skift farve</button>
+    <section class="img">
+      <img class="photo" src="/assets/img/koala.jpg" alt="" />
+      <img class="photo" src="/assets/img/koala.jpg" alt="" />
+      <img class="photo" src="/assets/img/koala.jpg" alt="" />
+      <img class="photo" src="/assets/img/koala.jpg" alt="" />
+    </section>
+
+    <h2>Overskrift uden ID</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam esse
+      voluptas ipsa, qui provident consequatur ratione rerum possimus!
+      Repudiandae, placeat.
+    </p>
+    <h2 id="subHeadline">Listevisning</h2>
+    <ul>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+      <li>List item 4</li>
+      <li>List item 5</li>
+    </ul>
 
     <script>
-      let button = document.getElementById("button");
-      let input = document.getElementById("input");
+      let headline = document.getElementById("headlineEvents");
 
-      button.addEventListener("mouseenter", chanceColor);
+      let listItem = document.getElementsByTagName("li");
 
-      input.addEventListener("keyup", (event) => {
-        chanceHeadline(event.target.value);
-      });
+      let photos = document.getElementsByClassName("photo");
 
-      function chanceColor() {
-        document.getElementById("paragraphEvents").style.color = "red";
-      }
+      let paragraphs = document.querySelectorAll("p");
 
-      function chanceHeadline(text) {
-        document.getElementById("headlineEvents").innerText = text;
-      }
+      let images = document.querySelectorAll("section .photo");
+
+      let subHeadline = document.querySelector("h2#subHeadline");
+
+      console.log(subHeadline);
     </script>
   </body>
 </html>
